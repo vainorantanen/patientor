@@ -121,15 +121,16 @@ const PatientInfo = ({ diagnoses }: Props) => {
       <Typography>{patient.gender}</Typography>
       <Typography>ssn: {patient.ssn}</Typography>
       <Typography>occupation: {patient.occupation}</Typography>
-      <Typography variant="h4">Entries</Typography>
+      
       <div>
       <h3>Add new HealthCheck entry</h3>
       <AddEntryForm
         onSubmit={submitNewEntry}
         error={error}
+        diagnoses={diagnoses}
       />
     </div>
-
+    <Typography variant="h4">Entries</Typography>
       <List>
         {patient.entries.map((entry) => (
           <React.Fragment key={entry.id}>
