@@ -1,8 +1,8 @@
 import React from 'react'
 import {  TextField, Button, Alert, Typography, Checkbox, ListItemText } from '@mui/material';
-import { useEffect, useState, SyntheticEvent } from 'react';
-import { Diagnosis, Entry, Patient, HealthCheckRating, EntryWithoutId } from '../../types';
-import { FormControl, InputLabel, Select, MenuItem, SelectChangeEvent } from '@mui/material';
+import { useState, SyntheticEvent } from 'react';
+import { Diagnosis, HealthCheckRating, EntryWithoutId } from '../../types';
+import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
 interface Props {
     diagnoses: Diagnosis[];

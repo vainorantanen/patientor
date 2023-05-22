@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Diagnosis, Entry, Patient, HealthCheckRating, EntryWithoutId } from '../../types';
 import patientService from '../../services/patients';
-import { useEffect, useState, SyntheticEvent } from 'react';
+import { useEffect, useState } from 'react';
 import { Typography, List, ListItem, ListItemText, Divider } from'@mui/material';
 import BusinessIcon from '@mui/icons-material/Business'; // Import BusinessIcon from '@mui/icons-material'
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital'; // Import appropriate Material-UI icons
@@ -19,10 +19,6 @@ interface Props {
   diagnoses: Diagnosis[];
   //onCancel: () => void;
   //onSubmit: (values: EntryWithoutId) => void;
-}
-
-function assertNever(value: never): never {
-  throw new Error(`Unhandled discriminated union member: ${JSON.stringify(value)}`);
 }
 
 const PatientInfo = ({ diagnoses }: Props) => {
